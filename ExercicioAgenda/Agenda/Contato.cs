@@ -10,6 +10,8 @@ namespace Agenda
 {
     public class Contato
     {
+        public int ID { get; set; }
+
         [Required]
         [MinLength(3)]
         [MaxLength(100)]

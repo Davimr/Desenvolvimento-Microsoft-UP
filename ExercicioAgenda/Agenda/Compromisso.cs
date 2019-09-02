@@ -10,6 +10,8 @@ namespace Agenda
 {
     public class Compromisso
     {
+        public int ID { get; set; }
+
         [Required]
         [MinLength(5)]
         [MaxLength(200)]
