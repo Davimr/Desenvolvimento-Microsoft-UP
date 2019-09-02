@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\AgendaViewModel.cs" />
     <Compile Include="WindowCompromissos.xaml.cs">
       <DependentUpon>WindowCompromissos.xaml</DependentUpon>
     </Compile>
@@ -114,6 +115,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agenda\Agenda.csproj">
+      <Project>{9A9A464A-531D-41FF-A0B2-0F440B4D49A7}</Project>
+      <Name>Agenda</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

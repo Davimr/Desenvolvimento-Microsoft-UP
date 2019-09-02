@@ -19,9 +19,13 @@ namespace AgendaWPF
     /// </summary>
     public partial class WindowContatos : Window
     {
+
+        
+
         public WindowContatos()
         {
             InitializeComponent();
+
             this.DataContext = this;
         }
 
