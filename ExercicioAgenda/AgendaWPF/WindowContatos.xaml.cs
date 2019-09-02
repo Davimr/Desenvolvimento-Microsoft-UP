@@ -22,6 +22,28 @@ namespace AgendaWPF
         public WindowContatos()
         {
             InitializeComponent();
+            this.DataContext = this;
+        }
+
+        private void Cancelar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Salvar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //
+            this.Close();
+        }
+
+        private void Adicionar_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Remover_Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

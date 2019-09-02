@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="WindowCompromissos" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto
+                           "/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="20,20,0,20">Compromissos:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="20,0,0,0"></TextBlock>
+
+        <Button Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="20,5,2,10" Width="120" HorizontalAlignment="Left" Click="Fechar_Button_Click">Fechar</Button>
+
     </Grid>
 </Window>

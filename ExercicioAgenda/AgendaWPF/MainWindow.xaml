@@ -12,9 +12,9 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Margin="0,0,0,50" Click="Button_Click">Contatos</Button>
-        <Button Grid.Row="1" Margin="0,0,0,50" Click="Button_Click_1">Compromissos</Button>
-        <Button Grid.Row="2">FInalizar Aplicação</Button>
+        <Button Grid.Row="0" Margin="0,0,0,50" Click="Button_Contato">Contatos</Button>
+        <Button Grid.Row="1" Margin="0,0,0,50" Click="Button_Compromisso">Compromissos</Button>
+        <Button Grid.Row="2" Click="Button_Finalizar">FInalizar Aplicação</Button>
         
     </Grid>
 </Window>

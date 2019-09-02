@@ -6,7 +6,41 @@
         xmlns:local="clr-namespace:AgendaWPF"
         mc:Ignorable="d"
         Title="WindowContatos" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.499,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="170"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Grid.Row="0" Grid.Column="1"> </ListView>
         
+        <Button Grid.Row="0" Grid.Column="0" Height="20" VerticalAlignment="Top" Margin="2,5,2,0" Width="120" Click="Adicionar_Button_Click">Adicionar Contato</Button>
+        <Button Grid.Row="0" Grid.Column="0" Height="20" VerticalAlignment="Bottom" Margin="2,0,2,5" Width="120" Click="Remover_Button_Click">Remover Contato</Button>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">Nome: </TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">Sobrenome: </TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">Data de Nascimento: </TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">Telefone: </TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">Compromissos: </TextBlock>
+        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="20,0,0,0"> </TextBlock>
+
+        <Button Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" Margin="20,5,2,10" Width="120" HorizontalAlignment="Left" Click="Salvar_Button_Click">Salvar</Button>
+        <Button Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" Margin="2,5,20,10" Width="120" HorizontalAlignment="Right" Click="Cancelar_Button_Click">Cancelar</Button>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0">Nome:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0">Sobrenome:</TextBlock>
+        <DatePicker Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" ></DatePicker>
+        <TextBlock Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0">Telefone:</TextBlock>
+
     </Grid>
 </Window>

@@ -28,16 +28,22 @@ namespace AgendaWPF
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Contato(object sender, RoutedEventArgs e)
         {
             WindowContatos wincontato = new WindowContatos();
             wincontato.Show();
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Compromisso(object sender, RoutedEventArgs e)
         {
+            WindowCompromissos windowCompromissos = new WindowCompromissos();
+            windowCompromissos.Show();
+        }
 
+        private void Button_Finalizar(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
