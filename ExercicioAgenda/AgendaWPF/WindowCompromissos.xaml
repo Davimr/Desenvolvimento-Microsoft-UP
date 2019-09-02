@@ -10,18 +10,37 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition Height="auto
                            "/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="20,20,0,20">Compromissos:</TextBlock>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="20,0,0,0"></TextBlock>
+        <Button Grid.Row="0" Grid.Column="1 " Height="20" VerticalAlignment="Center" Margin="20,20,0,16" Width="140"  HorizontalAlignment="Left" Click="Adicionar_Button_Click">Adicionar Compromisso</Button>
+        <Button Grid.Row="0" Grid.Column="1 " Height="20" VerticalAlignment="Center" Margin="0,20,20,16" Width="140"  HorizontalAlignment="Right" Click="Remover_Button_Click">Remover Compromisso</Button>
 
-        <Button Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="20,5,2,10" Width="120" HorizontalAlignment="Left" Click="Fechar_Button_Click">Fechar</Button>
+        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="20,20,0,20" Height="16">Compromissos:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,32" Height="16">Título:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,33" Height="16">Local:</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,32" Height="16">Data Início:</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="20,13,0,32" Height="16">Data Fim:</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,32" Height="16">Participantes:</TextBlock>
+
+        <Button Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="20,18,0,23" Width="120" HorizontalAlignment="Left" Click="Fechar_Button_Click" Height="20">Fechar</Button>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,32" Height="16">Título:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,33" Height="16">Local:</TextBlock>
+        <DatePicker Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="20,8,0,28" Height="24" ></DatePicker>
+        <DatePicker Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="20,9,0,28" Height="24" ></DatePicker>
+        <TextBlock Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,32" Height="16">Participantes:</TextBlock>
+
 
     </Grid>
 </Window>

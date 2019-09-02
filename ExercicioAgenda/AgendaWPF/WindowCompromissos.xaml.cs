@@ -29,5 +29,15 @@ namespace AgendaWPF
         {
             this.Close();
         }
+
+        private void Adicionar_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Remover_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
