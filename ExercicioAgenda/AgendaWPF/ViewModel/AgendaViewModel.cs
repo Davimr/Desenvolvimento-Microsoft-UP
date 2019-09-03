@@ -46,8 +46,8 @@ namespace AgendaWPF.ViewModel
         {
             if (this.ContatoSelecionado.ID != 0)
             {
-                this.Contatos.Remove(ContatoSelecionado);
                 this.modelAgenda.Contatos.Remove(ContatoSelecionado);
+                this.Contatos.Remove(ContatoSelecionado);
             }
         }
 

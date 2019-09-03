@@ -39,7 +39,7 @@
 
         <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.Nome}"></TextBox>
         <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.Sobrenome}"></TextBox>
-        <DatePicker Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.DataNascimento}"></DatePicker>
+        <DatePicker Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" SelectedDate="{Binding Path=AgendaViewModel.ContatoSelecionado.DataNascimento}"></DatePicker>
         <TextBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="20,0,0,0" Text="{Binding Path=AgendaViewModel.ContatoSelecionado.Telefone}"></TextBox>
         <ListView Grid.Row="6" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="20,0,0,0"  ItemsSource="{Binding Path=AgendaViewModel.Compromissos}" DisplayMemberPath="Titulo"></ListView>
 
