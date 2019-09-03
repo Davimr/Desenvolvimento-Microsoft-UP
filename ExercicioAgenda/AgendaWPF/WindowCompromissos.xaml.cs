@@ -41,5 +41,11 @@ namespace AgendaWPF
         {
             this.AgendaViewModel.RemoverCompromisso();
         }
+
+        private void Salvar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.AgendaViewModel.Salvar();
+            this.Close();
+        }
     }
 }

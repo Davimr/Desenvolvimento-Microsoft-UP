@@ -48,6 +48,7 @@ namespace AgendaWPF.ViewModel
             {
                 this.modelAgenda.Contatos.Remove(ContatoSelecionado);
                 this.Contatos.Remove(ContatoSelecionado);
+                this.modelAgenda.SaveChanges();
             }
         }
 
@@ -55,8 +56,8 @@ namespace AgendaWPF.ViewModel
         {
             if (this.CompromissoSelecionado.ID != 0)
             {
-                this.Compromissos.Remove(CompromissoSelecionado);
                 this.modelAgenda.Compromissos.Remove(CompromissoSelecionado);
+                this.Compromissos.Remove(CompromissoSelecionado);
             }
         }
 

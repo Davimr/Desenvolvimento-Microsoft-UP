@@ -22,7 +22,12 @@ namespace Agenda
         [MaxLength(100)]
         public String Sobrenome { get; set; }
 
-        public DateTime DataNascimento { get; set; }
+        private DateTime DataMaxima = DateTime.Now;
+        public DateTime DataNascimento { get {
+                return DataMaxima;
+            } set {
+                this.DataMaxima = value;
+            } } 
 
         [MaxLength(20)]
         public String Telefone { get; set; }
