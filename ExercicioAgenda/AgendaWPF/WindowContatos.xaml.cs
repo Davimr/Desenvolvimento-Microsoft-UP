@@ -20,12 +20,12 @@ namespace AgendaWPF
     public partial class WindowContatos : Window
     {
 
-        
 
+        public ViewModel.AgendaViewModel AgendaViewModel { get; set; }
         public WindowContatos()
         {
             InitializeComponent();
-
+            this.AgendaViewModel = new ViewModel.AgendaViewModel();
             this.DataContext = this;
         }
 
@@ -36,18 +36,25 @@ namespace AgendaWPF
 
         private void Salvar_Button_Click(object sender, RoutedEventArgs e)
         {
-            //
-            this.Close();
+            if(this.AgendaViewModel.PodeSalvarData)
+            {
+                this.AgendaViewModel.Salvar();
+                this.Close();
+            } else
+            {
+                return ;
+            }
+            
         }
 
         private void Adicionar_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.AgendaViewModel.AdicionarContato();
         }
 
         private void Remover_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.AgendaViewModel.RemoverContato();
         }
     }
 }

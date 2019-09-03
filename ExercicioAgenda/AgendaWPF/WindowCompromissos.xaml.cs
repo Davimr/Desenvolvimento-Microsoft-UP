@@ -19,9 +19,11 @@ namespace AgendaWPF
     /// </summary>
     public partial class WindowCompromissos : Window
     {
+        public ViewModel.AgendaViewModel AgendaViewModel { get; set; }
         public WindowCompromissos()
         {
             InitializeComponent();
+            this.AgendaViewModel = new ViewModel.AgendaViewModel();
             this.DataContext = this;
         }
 
@@ -32,12 +34,12 @@ namespace AgendaWPF
 
         private void Adicionar_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.AgendaViewModel.AdicionarCompromisso();
         }
 
         private void Remover_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.AgendaViewModel.RemoverCompromisso();
         }
     }
 }
