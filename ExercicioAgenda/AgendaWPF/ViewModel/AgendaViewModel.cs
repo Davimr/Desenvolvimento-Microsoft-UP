@@ -18,6 +18,8 @@ namespace AgendaWPF.ViewModel
 
         public Compromisso CompromissoSelecionado { get; set; }
 
+        public IList<Contato> ParticipantesCompromisso { get; set; }
+
         public ModelAgenda modelAgenda = new ModelAgenda();
 
         public AgendaViewModel()
@@ -27,7 +29,12 @@ namespace AgendaWPF.ViewModel
 
             this.Compromissos = new ObservableCollection<Compromisso>(modelAgenda.Compromissos.ToList());
             this.CompromissoSelecionado = modelAgenda.Compromissos.FirstOrDefault();
+
+            this.CompromissoSelecionado.Participantes.Add(Contatos.FirstOrDefault());
+
+            this.ParticipantesCompromisso = CompromissoSelecionado.Participantes;
         }
+
 
         public Boolean PodeSalvarData
         {

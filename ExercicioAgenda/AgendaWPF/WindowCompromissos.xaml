@@ -40,25 +40,20 @@
         <Button Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Margin="20,18,0,23" Width="120" HorizontalAlignment="Left" Click="Fechar_Button_Click" Height="20">Fechar</Button>
         <Button Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" Margin="20,5,2,10" Width="120" HorizontalAlignment="Right" Click="Salvar_Button_Click" >Salvar</Button>
 
-        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,32" Height="16" Text="{Binding Path=AgendaViewModel.CompromissoSelecionado.Titulo}"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,33" Height="16" Text="{Binding Path=AgendaViewModel.CompromissoSelecionado.Local}"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,32" Height="24" Text="{Binding Path=AgendaViewModel.CompromissoSelecionado.Titulo}"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,33" Height="24" Text="{Binding Path=AgendaViewModel.CompromissoSelecionado.Local}"></TextBox>
         <DatePicker Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="20,8,0,28" Height="24" SelectedDate="{Binding Path=AgendaViewModel.CompromissoSelecionado.DataInicio}" ></DatePicker>
         <DatePicker Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Margin="20,9,0,28" Height="24" SelectedDate="{Binding Path=AgendaViewModel.CompromissoSelecionado.DataFim}"></DatePicker>
-        <ListView Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"  Margin="20,12,0,32"  ItemsSource="{Binding Path=AgendaViewModel.Contatos}" DisplayMemberPath="Nome"></ListView>
+        <ListView Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"  Margin="20,12,0,32"  Height="24" ItemsSource="{Binding Path=AgendaViewModel.Contatos}" DisplayMemberPath="Nome"></ListView>
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1">
-            <ListView>
-                <ListViewItem>Contato1</ListViewItem>
-
+            <ListView Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Path=AgendaViewModel.Contatos}" DisplayMemberPath="Nome" Width="100px">
             </ListView>
             <StackPanel>
                 <Button>Adicionar</Button>
                 <Button>Remover</Button>
 
             </StackPanel>
-
-            <ListView>
-                <ListViewItem>Participante</ListViewItem>
-
+            <ListView Grid.Row="7" Grid.Column="3" ItemsSource="{Binding Path=AgendaViewModel.ParticipantesCompromisso}" DisplayMemberPath="Nome" Width="100px">
             </ListView>
         </StackPanel>
 
