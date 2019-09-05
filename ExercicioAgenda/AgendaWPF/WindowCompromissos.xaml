@@ -28,14 +28,13 @@
         <Button Grid.Row="0" Grid.Column="1 " Height="20" VerticalAlignment="Center" Margin="20,20,0,16" Width="140"  HorizontalAlignment="Left" Click="Adicionar_Button_Click">Adicionar Compromisso</Button>
         <Button Grid.Row="0" Grid.Column="1 " Height="20" VerticalAlignment="Center" Margin="0,20,20,16" Width="140"  HorizontalAlignment="Right" Click="Remover_Button_Click">Remover Compromisso</Button>
 
-        <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Path=AgendaViewModel.Compromissos}" DisplayMemberPath="Titulo" SelectedItem="{Binding Path=AgendaViewModel.CompromissoSelecionado}"></ListView>
+        <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Path=AgendaViewModel.Compromissos}" DisplayMemberPath="Titulo" SelectedItem="{Binding Path=AgendaViewModel.CompromissoSelecionado}" ></ListView>
 
         <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="20,20,0,20" Height="16">Compromissos:</TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,32" Height="16" >Título:</TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,33" Height="16">Local:</TextBlock>
         <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,32" Height="16">Data Início:</TextBlock>
         <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="20,13,0,32" Height="16">Data Fim:</TextBlock>
-        <TextBlock Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="20,12,0,32" Height="16">Participantes:</TextBlock>
 
         <Button Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Margin="20,18,0,23" Width="120" HorizontalAlignment="Left" Click="Fechar_Button_Click" Height="20">Fechar</Button>
         <Button Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" Margin="20,5,2,10" Width="120" HorizontalAlignment="Right" Click="Salvar_Button_Click" >Salvar</Button>
@@ -44,7 +43,6 @@
         <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="20,12,0,33" Height="24" Text="{Binding Path=AgendaViewModel.CompromissoSelecionado.Local}"></TextBox>
         <DatePicker Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="20,8,0,28" Height="24" SelectedDate="{Binding Path=AgendaViewModel.CompromissoSelecionado.DataInicio}" ></DatePicker>
         <DatePicker Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Margin="20,9,0,28" Height="24" SelectedDate="{Binding Path=AgendaViewModel.CompromissoSelecionado.DataFim}"></DatePicker>
-        <ListView Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"  Margin="20,12,0,32"  Height="24" ItemsSource="{Binding Path=AgendaViewModel.Contatos}" DisplayMemberPath="Nome"></ListView>
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1">
             <ListView Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Path=AgendaViewModel.Contatos}" DisplayMemberPath="Nome" Width="100px">
             </ListView>

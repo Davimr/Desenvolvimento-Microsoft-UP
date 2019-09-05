@@ -18,19 +18,18 @@ namespace AgendaWPF.ViewModel
 
         public Compromisso CompromissoSelecionado { get; set; }
 
-        public IList<Contato> ParticipantesCompromisso { get; set; }
+        public ICollection<Contato> ParticipantesCompromisso { get; set; }
 
-        public ModelAgenda modelAgenda = new ModelAgenda();
+        public ModelAgenda modelAgenda { get; set; }
 
         public AgendaViewModel()
         {
-            this.Contatos = new ObservableCollection<Contato>(modelAgenda.Contatos.ToList());
+            modelAgenda = new ModelAgenda();
+            this.Contatos = new ObservableCollection<Contato>(modelAgenda.Contatos.Include("Compromissos").ToList());
             this.ContatoSelecionado = modelAgenda.Contatos.FirstOrDefault();
 
-            this.Compromissos = new ObservableCollection<Compromisso>(modelAgenda.Compromissos.ToList());
+            this.Compromissos = new ObservableCollection<Compromisso>(modelAgenda.Compromissos.Include("Participantes").ToList());
             this.CompromissoSelecionado = modelAgenda.Compromissos.FirstOrDefault();
-
-            this.CompromissoSelecionado.Participantes.Add(Contatos.FirstOrDefault());
 
             this.ParticipantesCompromisso = CompromissoSelecionado.Participantes;
         }

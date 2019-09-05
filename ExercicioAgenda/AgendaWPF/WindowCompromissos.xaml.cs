@@ -47,5 +47,6 @@ namespace AgendaWPF
             this.AgendaViewModel.Salvar();
             this.Close();
         }
+
     }
 }
