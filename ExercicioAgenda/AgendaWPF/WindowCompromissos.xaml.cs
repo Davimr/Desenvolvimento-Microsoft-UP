@@ -48,5 +48,14 @@ namespace AgendaWPF
             this.Close();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.AgendaViewModel.CompromissoSelecionado.Participantes.Add(this.AgendaViewModel.ContatoSelecionado);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.AgendaViewModel.CompromissoSelecionado.Participantes.Remove(this.AgendaViewModel.ParticipanteSelecionado);
+        }
     }
 }

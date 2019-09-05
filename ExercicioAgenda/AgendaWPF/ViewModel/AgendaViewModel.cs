@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +12,7 @@ namespace AgendaWPF.ViewModel
 {
     public class AgendaViewModel
     {
+
         public ObservableCollection<Contato> Contatos { get; set; } 
 
         public ObservableCollection<Compromisso> Compromissos { get; set; }
@@ -19,6 +22,8 @@ namespace AgendaWPF.ViewModel
         public Compromisso CompromissoSelecionado { get; set; }
 
         public ICollection<Contato> ParticipantesCompromisso { get; set; }
+
+        public Contato ParticipanteSelecionado { get; set; }
 
         public ModelAgenda modelAgenda { get; set; }
 
@@ -32,6 +37,7 @@ namespace AgendaWPF.ViewModel
             this.CompromissoSelecionado = modelAgenda.Compromissos.FirstOrDefault();
 
             this.ParticipantesCompromisso = CompromissoSelecionado.Participantes;
+            this.ParticipanteSelecionado = ParticipantesCompromisso.FirstOrDefault();
         }
 
 

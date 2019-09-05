@@ -44,16 +44,18 @@
         <DatePicker Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="20,8,0,28" Height="24" SelectedDate="{Binding Path=AgendaViewModel.CompromissoSelecionado.DataInicio}" ></DatePicker>
         <DatePicker Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Margin="20,9,0,28" Height="24" SelectedDate="{Binding Path=AgendaViewModel.CompromissoSelecionado.DataFim}"></DatePicker>
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1">
-            <ListView Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Path=AgendaViewModel.Contatos}" DisplayMemberPath="Nome" Width="100px">
+            <ListView Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Path=AgendaViewModel.Contatos}" DisplayMemberPath="Nome" Width="100px" SelectedItem="{Binding Path=AgendaViewModel.ContatoSelecionado}">
             </ListView>
             <StackPanel>
-                <Button>Adicionar</Button>
-                <Button>Remover</Button>
+                <Button Click="Button_Click">Adicionar</Button>
+                <Button Click="Button_Click_1">Remover</Button>
 
             </StackPanel>
-            <ListView Grid.Row="7" Grid.Column="3" ItemsSource="{Binding Path=AgendaViewModel.ParticipantesCompromisso}" DisplayMemberPath="Nome" Width="100px">
+            <ListView Grid.Row="7" Grid.Column="3" ItemsSource="{Binding Path=AgendaViewModel.ParticipantesCompromisso}" DisplayMemberPath="Nome" Width="100px" SelectedItem="{Binding Path=AgendaViewModel.ParticipanteSelecionado}">
             </ListView>
         </StackPanel>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="20,41,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Contatos" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="169,41,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Participantes" VerticalAlignment="Top" Width="81"/>
 
     </Grid>
 </Window>
