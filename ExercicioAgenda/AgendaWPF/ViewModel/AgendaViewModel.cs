@@ -21,7 +21,7 @@ namespace AgendaWPF.ViewModel
 
         public Compromisso CompromissoSelecionado { get; set; }
 
-        public ICollection<Contato> ParticipantesCompromisso { get; set; }
+        public ObservableCollection<Contato> ParticipantesCompromisso { get; set; }
 
         public Contato ParticipanteSelecionado { get; set; }
 
@@ -36,7 +36,7 @@ namespace AgendaWPF.ViewModel
             this.Compromissos = new ObservableCollection<Compromisso>(modelAgenda.Compromissos.Include("Participantes").ToList());
             this.CompromissoSelecionado = modelAgenda.Compromissos.FirstOrDefault();
 
-            this.ParticipantesCompromisso = CompromissoSelecionado.Participantes;
+            this.ParticipantesCompromisso = new ObservableCollection<Contato>(CompromissoSelecionado.Participantes);
             this.ParticipanteSelecionado = ParticipantesCompromisso.FirstOrDefault();
         }
 
